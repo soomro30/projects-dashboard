@@ -1,0 +1,220 @@
+.login-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.login-wrapper > * {
+  height: 100%;
+}
+
+.login-wrapper .bg-pic {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.login-wrapper .bg-pic::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.login-wrapper .bg-pic img {
+  display: block;
+  opacity: 1 !important;
+}
+
+.login-wrapper .bg-caption {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 2;
+}
+
+.login-wrapper .login-container {
+  width: 496px;
+  display: block;
+  position: relative;
+  float: right;
+  z-index: 2;
+}
+
+.login-wrapper .bg-caption h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.login-wrapper .bg-caption p {
+  font-size: 16px;
+  margin: 5px 0 0 0;
+}
+
+.form-group-default {
+  background-color: #f6f7f9;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 2px;
+  padding-top: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 4px;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group-default label {
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin: 0;
+  display: block;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.47);
+  font-weight: 600;
+}
+
+.form-group-default .form-control {
+  border: none;
+  min-height: 25px;
+  padding: 0;
+  margin-top: -4px;
+  background: none;
+  font-size: 14px;
+}
+
+.form-group-default.focused {
+  border-color: #7252d3 !important;
+  background-color: #fff;
+}
+
+.form-group-default.required label:after {
+  content: '*';
+  margin-left: 2px;
+  color: #e62a2a;
+}
+
+.form-group-default.has-error {
+  background-color: #fff0f0;
+  border-color: #e62a2a;
+}
+
+.form-group-default input.form-control {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.form-group-default input.form-control:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Utility Classes */
+.pull-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.p-l-20 { padding-left: 20px; }
+.p-r-20 { padding-right: 20px; }
+.p-t-20 { padding-top: 20px; }
+.p-b-20 { padding-bottom: 20px; }
+.p-l-50 { padding-left: 50px; }
+.p-r-50 { padding-right: 50px; }
+.p-t-50 { padding-top: 50px; }
+.p-b-50 { padding-bottom: 50px; }
+.p-l-15 { padding-left: 15px; }
+.p-r-15 { padding-right: 15px; }
+.p-t-15 { padding-top: 15px; }
+.p-b-15 { padding-bottom: 15px; }
+.p-t-35 { padding-top: 35px; }
+
+.m-t-10 { margin-top: 10px; }
+.m-t-20 { margin-top: 20px; }
+.m-t-30 { margin-top: 30px; }
+.m-b-20 { margin-bottom: 20px; }
+.m-b-30 { margin-bottom: 30px; }
+.p-r-80 { padding-right: 80px; }
+
+.no-padding { padding: 0; }
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.text-white { color: #fff; }
+.semi-bold { font-weight: 600; }
+.small { font-size: 14px; }
+.small-text { font-size: 13px; }
+.normal { font-weight: 400; }
+.hint-text { color: rgba(0, 0, 0, 0.4); }
+.text-info { color: #49b6d6; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-cons {
+  padding: 12px 30px;
+  font-size: 14px;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .login-wrapper .login-container {
+    width: 100%;
+  }
+  .sm-p-l-10 { padding-left: 10px; }
+  .sm-p-l-15 { padding-left: 15px; }
+  .sm-p-r-15 { padding-right: 15px; }
+  .sm-p-t-40 { padding-top: 40px; }
+  .sm-p-b-20 { padding-bottom: 20px; }
+  .sm-m-t-20 { margin-top: 20px; }
+  .sm-pull-bottom {
+    position: relative;
+  }
+}
+
+@media (max-height: 630px) {
+	.sm-pull-bottom .clearfix .no-padding .hint-text{
+		display: none;
+	}
+}

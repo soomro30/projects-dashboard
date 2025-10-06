@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "username": "adcg.board",
+      "password": "$2a$10$rK8ZqVx8Y7HzN3mJ0KxP5O.Xw4v2QN9Y6Hd8pL3sC1aR7bT9fW2eG",
+      "role": "board",
+      "name": "ADCG Board User"
+    }
+  ]
+}
