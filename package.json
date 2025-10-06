@@ -25,7 +25,7 @@
     "echarts-for-react": "^2.0.16",
     "echarts-gl": "^1.1.1",
     "font-awesome": "^4.7.0",
-    "html-react-parser": "^0.10.5",
+    "html-react-parser": "^5.1.21",
     "html2canvas": "^1.4.1",
     "html2pdf.js": "^0.12.1",
     "html5-file-selector": "^2.1.0",
