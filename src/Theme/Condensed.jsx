@@ -126,7 +126,7 @@ const Condensed = ({ onLogout, onLogin, isLoginOnly, userRole }) => {
 				<Route path="/" element={<Dashboard userRole={userRole} />} />
 				<Route path="/condensed" element={<Dashboard userRole={userRole} />} />
 				<Route path="dashboard" element={<Dashboard userRole={userRole} />} />
-				<Route path="project/:projectId" element={<ProjectDashboard userRole={userRole} />} />
+				<Route path="condensed/project/:projectId" element={<ProjectDashboard userRole={userRole} />} />
 				<Route path="social" element={<Social />} />
 				<Route
 					path="email"
