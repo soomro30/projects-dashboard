@@ -101,6 +101,24 @@ const Condensed = ({ onLogout, onLogin, isLoginOnly, userRole }) => {
 		!path.includes("/404") &&
 		!path.includes("/500");
 
+	if (!shouldShowHeaderAndSidebar) {
+		return (
+			<Routes>
+				{isLoginOnly ? (
+					<Route path="*" element={<ExtraLogin onLogin={onLogin} />} />
+				) : (
+					<>
+					<Route path="extra/login" element={<ExtraLogin onLogin={onLogin} />} />
+					<Route path="extra/register" element={<ExtraRegister />} />
+					<Route path="extra/lock_screen" element={<ExtraLockScreen />} />
+					<Route path="extra/404" element={<Extra400 />} />
+					<Route path="extra/500" element={<Extra500 />} />
+					</>
+				)}
+			</Routes>
+		);
+	}
+
 	return (
 		<div className="page-container">
 			<Header
@@ -185,12 +203,7 @@ const Condensed = ({ onLogout, onLogin, isLoginOnly, userRole }) => {
 
 				{/* START Extra group routes */}
 				<Route path="extra/invoice" element={<ExtraInvoice />} />
-				<Route path="extra/404" element={<Extra400 />} />
-				<Route path="extra/500" element={<Extra500 />} />
 				<Route path="extra/blank_template" element={<ExtraBlank />} />
-				<Route path="extra/login" element={<ExtraLogin onLogin={onLogin} />} />
-				<Route path="extra/register" element={<ExtraRegister />} />
-				<Route path="extra/lock_screen" element={<ExtraLockScreen />} />
 				<Route path="extra/gallery" element={<ExtraGallery />} />
 				<Route path="extra/timeline" element={<ExtraTimeLine />} />
 				{/* END Extra routes */}
