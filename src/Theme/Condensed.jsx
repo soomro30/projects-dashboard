@@ -93,27 +93,25 @@ const Condensed = ({ onLogout, onLogin, isLoginOnly, userRole }) => {
 		document.body.classList.remove("cards-view-page");
 	}
 
-	const shouldShowHeaderAndSidebar = !path.includes("boxed_layout") &&
+	const shouldShowHeaderAndSidebar = !isLoginOnly &&
+		!path.includes("boxed_layout") &&
 		!path.includes("/login") &&
 		!path.includes("/register") &&
 		!path.includes("/lock_screen") &&
 		!path.includes("/404") &&
-		!path.includes("/500") &&
-		!isLoginOnly;
+		!path.includes("/500");
 
 	return (
 		<div className="h-100">
-			{shouldShowHeaderAndSidebar && (
-					<div>
-						<Header
-							location={location}
-							inboxHeader={toggleInboxHeader}
-							setInboxHeader={(value) => setToggleInboxHeader(value)}
-							onLogout={onLogout}
-						/>
-						<Sidebar location={location} />
-					</div>
-				)}
+			<div>
+				<Header
+					location={location}
+					inboxHeader={toggleInboxHeader}
+					setInboxHeader={(value) => setToggleInboxHeader(value)}
+					onLogout={onLogout}
+				/>
+				<Sidebar location={location} />
+			</div>
 
 			<Routes>
 				{isLoginOnly ? (
