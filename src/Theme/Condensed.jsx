@@ -102,26 +102,25 @@ const Condensed = ({ onLogout, onLogin, isLoginOnly, userRole }) => {
 		!path.includes("/500");
 
 	return (
-		<div className="h-100">
-			<div>
-				<Header
-					location={location}
-					inboxHeader={toggleInboxHeader}
-					setInboxHeader={(value) => setToggleInboxHeader(value)}
-					onLogout={onLogout}
-				/>
-				<Sidebar location={location} />
-			</div>
-
-			<Routes>
-				{isLoginOnly ? (
-					<Route path="*" element={<ExtraLogin onLogin={onLogin} />} />
-				) : (
-					<>
-				<Route path="/" element={<Dashboard userRole={userRole} />} />
-				<Route path="/condensed" element={<Dashboard userRole={userRole} />} />
-				<Route path="dashboard" element={<Dashboard userRole={userRole} />} />
-				<Route path="project/:projectId" element={<ProjectDashboard userRole={userRole} />} />
+		<div className="page-container">
+			<Header
+				location={location}
+				inboxHeader={toggleInboxHeader}
+				setInboxHeader={(value) => setToggleInboxHeader(value)}
+				onLogout={onLogout}
+			/>
+			<Sidebar location={location} />
+			<div className="page-content-wrapper">
+				<div className="content">
+					<Routes>
+						{isLoginOnly ? (
+							<Route path="*" element={<ExtraLogin onLogin={onLogin} />} />
+						) : (
+							<>
+						<Route path="/" element={<Dashboard userRole={userRole} />} />
+						<Route path="/condensed" element={<Dashboard userRole={userRole} />} />
+						<Route path="dashboard" element={<Dashboard userRole={userRole} />} />
+						<Route path="project/:projectId" element={<ProjectDashboard userRole={userRole} />} />
 				<Route path="social" element={<Social />} />
 				<Route
 					path="email"
@@ -200,12 +199,13 @@ const Condensed = ({ onLogout, onLogin, isLoginOnly, userRole }) => {
 				<Route path="levelOne" element={<MenuLevelOne />} />
 				<Route path="submenu" element={<Submenu />} />
 				{/* END Menu Levels routes */}
-				</>
-				)}
-			</Routes>
-			
-			{(path.includes("/condensed") || path === "/") && <Search />}
+						</>
+					)}
+				</Routes>
+			</div>
 		</div>
+		{(path.includes("/condensed") || path === "/") && <Search />}
+	</div>
 	);
 };
 
