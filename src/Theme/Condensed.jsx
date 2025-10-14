@@ -93,16 +93,17 @@ const Condensed = ({ onLogout, onLogin, isLoginOnly, userRole }) => {
 		document.body.classList.remove("cards-view-page");
 	}
 
+	const shouldShowHeaderAndSidebar = !path.includes("boxed_layout") &&
+		!path.includes("/login") &&
+		!path.includes("/register") &&
+		!path.includes("/lock_screen") &&
+		!path.includes("/404") &&
+		!path.includes("/500") &&
+		!isLoginOnly;
+
 	return (
 		<div className="h-100">
-			{(path.includes("/condensed") || path === "/") &&
-				!path.includes("boxed_layout") &&
-				!path.includes("/login") &&
-				!path.includes("/register") &&
-				!path.includes("/lock_screen") &&
-				!path.includes("/404") &&
-				!path.includes("/500") &&
-				!isLoginOnly && (
+			{shouldShowHeaderAndSidebar && (
 					<div>
 						<Header
 							location={location}
