@@ -577,7 +577,7 @@ const Content = ({ userRole }) => {
 
   return (
     <div className="page-content-wrapper">
-      <div className="content sm-gutter">
+      <div className="content sm-gutter" style={{ paddingTop: '10px' }}>
         <div className="container-fluid padding-25 sm-padding-10">
           {/* Overview Heading */}
           <div className="row">
