@@ -12,7 +12,7 @@ const Component = ({ location, inboxHeader, setInboxHeader, onLogout }) => {
   return (
     <div
       className={`header ${sideBarStatus && (location.pathname !== '/') ? 'headerAlign' : ''}`}
-      style={location.pathname === "/google_map" ? { backgroundColor: 'transparent' } : {}}
+      style={location.pathname === "/google_map" ? { backgroundColor: 'transparent' } : { backgroundColor: '#323237' }}
     >
       {location.pathname.includes("boxed_layout") ?
         <div className="container">

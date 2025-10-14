@@ -72,6 +72,7 @@ const Content = ({ location, inboxHeader, setInboxHeader, onLogout }) => {
         onClick={() => {
           setMobileSidebarToggle((prevState) => !prevState);
         }}
+        style={{ color: '#fff' }}
       >
         menu
       </SafeAnchor>
@@ -80,7 +81,7 @@ const Content = ({ location, inboxHeader, setInboxHeader, onLogout }) => {
         {customDropdown}
         <div className="brand inline ">
           <img
-            src="https://www.waleedshah.ae/wp-content/uploads/2018/07/imkan-logo-5922b29939c99-300x129.png"
+            src="https://azcb.co/wp-content/uploads/2025/02/imkan-properties-logo-white.png"
             alt="IMKAN logo"
 			className="header-logo"
             width="80"
