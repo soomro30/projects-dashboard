@@ -214,15 +214,16 @@ const Component = () => {
 
 	return (
 		<>
-			<div className="header">
+			<div className="header" style={{ backgroundColor: '#323237' }}>
 				<div style={{ display: 'flex', alignItems: 'center', height: '70px', width: '100%', padding: '0', margin: '0' }}>
 					{/* Left: IMKAN Logo - Extreme Left */}
 					<div style={{ position: 'absolute', left: '0px', top: '50%', transform: 'translateY(-50%)', zIndex: 10, padding: '0 10px' }}>
 						<a href="/condensed/dashboard" className="brand inline" style={{ display: 'flex', alignItems: 'center', margin: 0, padding: 0 }}>
 							<img
-								src="https://www.waleedshah.ae/wp-content/uploads/2018/07/imkan-logo-5922b29939c99-300x129.png"
+								src="https://azcb.co/wp-content/uploads/2025/02/imkan-properties-logo-white.png"
 								alt="IMKAN"
-								height={50}
+								width={80}
+								height={34}
 								style={{ objectFit: 'contain' }}
 							/>
 						</a>
