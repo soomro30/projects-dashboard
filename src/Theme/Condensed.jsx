@@ -120,15 +120,14 @@ const Condensed = ({ onLogout, onLogin, isLoginOnly, userRole }) => {
 	}
 
 	return (
-		<div className="page-container">
+		<div className="page-container" style={{ paddingLeft: 0 }}>
 			<Header
 				location={location}
 				inboxHeader={toggleInboxHeader}
 				setInboxHeader={(value) => setToggleInboxHeader(value)}
 				onLogout={onLogout}
 			/>
-			<Sidebar location={location} />
-			<div className="page-content-wrapper">
+			<div className="page-content-wrapper" style={{ marginLeft: 0 }}>
 				<div className="content">
 					<Routes>
 						{isLoginOnly ? (
