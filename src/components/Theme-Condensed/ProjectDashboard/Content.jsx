@@ -491,7 +491,7 @@ const Content = ({ projectData }) => {
 	if (!projectData) {
 		return (
 			<div className="page-content-wrapper ">
-				<div className="content sm-gutter">
+				<div className="content sm-gutter" style={{ paddingTop: '10px' }}>
 					<div className="container-fluid padding-25 sm-padding-10">
 						<div className="row">
 							<div className="col-lg-12 text-center">
@@ -1235,7 +1235,7 @@ const Content = ({ projectData }) => {
 
 	return (
 		<div className="page-content-wrapper">
-			<div className="content sm-gutter">
+			<div className="content sm-gutter" style={{ paddingTop: '10px' }}>
 				<div className="container-fluid padding-25 sm-padding-10" style={{ paddingBottom: '40px' }} ref={dashboardRef}>
 
 					{/* Project Title with Reporting Info - Right Aligned */}
