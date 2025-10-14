@@ -64,8 +64,6 @@ class Component extends React.Component {
     this.setState({ searchText: e.target.value });
   };
   componentDidMount() {
-    document.addEventListener("keypress", this.handleKeyPress);
-    document.addEventListener("keyup", this.handleKeyUp);
     document
       .getElementById("headerSearchInputCondensed")
       ?.addEventListener("click", this.handleHeaderSearchInput);
@@ -74,8 +72,6 @@ class Component extends React.Component {
       ?.addEventListener("click", this.handleHeaderSearchInput);
   }
   componentWillUnmount() {
-    document.removeEventListener("keypress", this.handleKeyPress);
-    document.removeEventListener("keyup", this.handleKeyUp);
     document.removeEventListener("click", this.handleHeaderSearchInput);
   }
   render() {

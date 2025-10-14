@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../pages/scss/themes/condensed/condensed.scss";
 
 import Dashboard from "../components/Theme-Condensed/Dashboard";
 import ProjectDashboard from "../components/Theme-Condensed/ProjectDashboard";
@@ -73,12 +74,7 @@ function withRouter(Component) {
 
 
 const Condensed = ({ onLogout, onLogin, isLoginOnly, userRole }) => {
-	if (
-		window.location.pathname.includes("condensed") ||
-		window.location.pathname === "/"
-	) {
-		require("../pages/scss/themes/condensed/condensed.scss");
-	}
+	const location = useLocation();
 	let path = location.pathname;
 	const [toggleInboxHeader, setToggleInboxHeader] = useState(false);
 
@@ -126,7 +122,7 @@ const Condensed = ({ onLogout, onLogin, isLoginOnly, userRole }) => {
 				<Route path="/" element={<Dashboard userRole={userRole} />} />
 				<Route path="/condensed" element={<Dashboard userRole={userRole} />} />
 				<Route path="dashboard" element={<Dashboard userRole={userRole} />} />
-				<Route path="condensed/project/:projectId" element={<ProjectDashboard userRole={userRole} />} />
+				<Route path="project/:projectId" element={<ProjectDashboard userRole={userRole} />} />
 				<Route path="social" element={<Social />} />
 				<Route
 					path="email"
