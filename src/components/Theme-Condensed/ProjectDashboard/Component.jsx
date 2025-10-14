@@ -175,20 +175,14 @@ const Component = () => {
 
 	if (loading) {
 		return (
-			<div className="page-container">
-				<div className="page-content-wrapper">
-					<div className="content">
-						<div className="container-fluid padding-25">
-							<div className="row">
-								<div className="col-lg-12 text-center">
-									<div className="card no-margin">
-										<div className="card-body p-40">
-											<h4>Loading Project Data...</h4>
-											<div className="progress progress-small m-t-20">
-												<div className="progress-bar progress-bar-primary" style={{ width: "60%" }}></div>
-											</div>
-										</div>
-									</div>
+			<div className="container-fluid padding-25">
+				<div className="row">
+					<div className="col-lg-12 text-center">
+						<div className="card no-margin">
+							<div className="card-body p-40">
+								<h4>Loading Project Data...</h4>
+								<div className="progress progress-small m-t-20">
+									<div className="progress-bar progress-bar-primary" style={{ width: "60%" }}></div>
 								</div>
 							</div>
 						</div>
@@ -200,22 +194,16 @@ const Component = () => {
 
 	if (error) {
 		return (
-			<div className="page-container">
-				<div className="page-content-wrapper">
-					<div className="content">
-						<div className="container-fluid padding-25">
-							<div className="row">
-								<div className="col-lg-12 text-center">
-									<div className="card no-margin">
-										<div className="card-body p-40">
-											<h4 className="text-danger">Error Loading Project</h4>
-											<p>{error}</p>
-											<a href="/condensed/dashboard" className="btn btn-primary">
-												Back to Dashboard
-											</a>
-										</div>
-									</div>
-								</div>
+			<div className="container-fluid padding-25">
+				<div className="row">
+					<div className="col-lg-12 text-center">
+						<div className="card no-margin">
+							<div className="card-body p-40">
+								<h4 className="text-danger">Error Loading Project</h4>
+								<p>{error}</p>
+								<a href="/condensed/dashboard" className="btn btn-primary">
+									Back to Dashboard
+								</a>
 							</div>
 						</div>
 					</div>
@@ -225,7 +213,7 @@ const Component = () => {
 	}
 
 	return (
-		<div className="page-container">
+		<>
 			<div className="header">
 				<div style={{ display: 'flex', alignItems: 'center', height: '70px', width: '100%', padding: '0', margin: '0' }}>
 					{/* Left: IMKAN Logo - Extreme Left */}
@@ -265,10 +253,8 @@ const Component = () => {
 					</div>
 				</div>
 			</div>
-			<div className="page-content-wrapper">
-				<Content projectData={projectData} />
-			</div>
-		</div>
+			<Content projectData={projectData} />
+		</>
 	);
 };
 
