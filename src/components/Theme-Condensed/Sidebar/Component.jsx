@@ -100,15 +100,6 @@ class Component extends React.Component {
       ? "sidebar-overlay-slide from-top show"
       : "sidebar-overlay-slide from-top";
 
-    let shouldViewHeader =
-      window.location.pathname !== "/extra/404" &&
-      window.location.pathname !== "/extra/500" &&
-      window.location.pathname !== "/extra/login" &&
-      window.location.pathname !== "/extra/register" &&
-      window.location.pathname !== "/extra/lock_screen"
-        ? true
-        : false;
-
     let isBoxedLayout = window.location.pathname.includes("/boxed_layout")
       ? true
       : false;
@@ -126,7 +117,7 @@ class Component extends React.Component {
     }
     return (
       <nav
-        style={shouldViewHeader ? style : { display: "none" }}
+        style={style}
         className={`page-sidebar ${this.props.openState ? "visible" : ""}`}
         data-pages="sidebar"
         onMouseEnter={this.handleMouseEnter}

@@ -7,18 +7,12 @@ import './style.css';
 
 const Component = ({ location, inboxHeader, setInboxHeader, onLogout }) => {
 
-  let shouldViewHeader = (location.pathname !== "/extra/404" &&
-    location.pathname !== "/extra/500" &&
-    location.pathname !== "/extra/login" &&
-    location.pathname !== "/extra/register" &&
-    location.pathname !== "/extra/lock_screen" ? true : false);
-
   const sideBarStatus = useSelector(state => state.QuickView.openMobileSideBar)
 
   return (
     <div
       className={`header ${sideBarStatus && (location.pathname !== '/') ? 'headerAlign' : ''}`}
-      style={shouldViewHeader ? (location.pathname === "/google_map" ? { backgroundColor: 'transparent' } : {}) : { display: 'none' }}
+      style={location.pathname === "/google_map" ? { backgroundColor: 'transparent' } : {}}
     >
       {location.pathname.includes("boxed_layout") ?
         <div className="container">
