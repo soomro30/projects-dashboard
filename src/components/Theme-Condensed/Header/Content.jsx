@@ -77,7 +77,7 @@ const Content = ({ location, inboxHeader, setInboxHeader, onLogout }) => {
         menu
       </SafeAnchor>
 
-      <div className="">
+      <div className="d-flex align-items-center">
         {customDropdown}
         <div className="brand inline ">
           <img
@@ -89,7 +89,9 @@ const Content = ({ location, inboxHeader, setInboxHeader, onLogout }) => {
 			style={{marginLeft:'33px'}}
           />
         </div>
-
+        <h4 className="m-0 p-0" style={{ color: '#fff', marginLeft: '20px', fontWeight: '600' }}>
+          IMKAN Projects Dashboard
+        </h4>
       </div>
       <div className="d-flex align-items-center">
         <div
